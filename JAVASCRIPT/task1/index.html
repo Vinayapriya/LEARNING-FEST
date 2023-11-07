@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dice Roller</title>
+  <style>
+    .dice {
+      width: 200px;
+      height: 200px;
+      border: 1px solid black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 2em;
+    }
+  </style>
+</head>
+<body>
+  <h1>Dice Roller</h1>
+  <br><br>
+  <div class="dice" id="dice"> Click 'Roll the Dice' to start</div><br><br><br>
+  <button onclick="rollDice()">Roll the dice</button>
+  <script>
+    function rollDice() {
+      const resultElement = document.getElementById("dice");
+      const result = Math.floor(Math.random() * 6) + 1;
+      resultElement.innerHTML = result;
+    }
+  </script>
+</body>
+</html>
